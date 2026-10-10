@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
   const emitSourcemaps = mode === 'development'
 
   return {
-    base: process.env.FIGMA_PUBLIC_URL ? `${process.env.FIGMA_PUBLIC_URL}/` : '/',
+    base: process.env.FIGMA_PUBLIC_URL ? `${process.env.FIGMA_PUBLIC_URL}/` : './',
     build: {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
@@ -33,7 +33,11 @@ export default defineConfig(({ mode }) => {
       host: '0.0.0.0',
       port: parseInt(process.env.PORT || '8443'),
       strictPort: true,
-      watch: { ignored: ['**/.figma/**'] },
+      watch: {
+        ignored: ['**/.figma/**'],
+        usePolling: true,
+        interval: 500,
+      },
     },
     preview: {
       host: '0.0.0.0',
