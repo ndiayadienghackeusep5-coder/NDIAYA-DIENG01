@@ -523,24 +523,24 @@ function CadreHero() {
     { id: "contact", label: "Me contacter", icon: "✉️", style: "bg-emerald-600/30 hover:bg-emerald-600/50 border border-emerald-400/40 text-emerald-200" },
   ];
   return (
-    <section id="accueil" className="pt-28 pb-16 bg-[#180D16] text-white">
+    <section id="accueil" className="pt-24 pb-10 sm:pt-28 sm:pb-16 bg-[#180D16] text-white">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="rounded-[2.5rem] bg-gradient-to-b from-white/10 to-white/5 border border-white/15 p-8 sm:p-14 backdrop-blur-xl shadow-2xl relative overflow-hidden">
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-white/15 text-xs font-extrabold uppercase tracking-widest text-[#E8B3C9]">
+        <div className="rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-b from-white/10 to-white/5 border border-white/15 p-5 sm:p-14 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+          <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 pb-5 sm:pb-8 border-b border-white/15 text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.12em] sm:tracking-widest text-[#E8B3C9]">
             <div className="flex items-center gap-2.5">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
               <span>Dakar, Sénégal · Disponible immédiatement</span>
             </div>
             <span>Programme Hackeuses · Sonatel Academy / Orange Digital Center</span>
           </div>
-          <div className="grid lg:grid-cols-12 gap-10 items-center py-10">
-            <div className="lg:col-span-7 space-y-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 items-center py-7 sm:py-10">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6">
               <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-black tracking-widest text-[#E8B3C9] uppercase">
                 ✦ Portfolio Créatif & Professionnel
               </div>
               <div className="space-y-2">
-                <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.08]">Ndiaya Dieng</h1>
-                <p className="text-xl sm:text-2xl font-bold text-[#E8B3C9]">Créative digitale polyvalente</p>
+                <h1 className="text-3xl sm:text-6xl font-extrabold tracking-tight leading-[1.08]">Ndiaya Dieng</h1>
+                <p className="text-lg sm:text-2xl font-bold text-[#E8B3C9]">Créative digitale polyvalente</p>
               </div>
               <div className="flex flex-wrap gap-2 pt-1">
                 {roles.map((r, i) => (
@@ -556,12 +556,12 @@ function CadreHero() {
                 Issue du programme d'excellence <strong>Hackeuses (Sonatel Academy / Orange Digital Center)</strong>, je combine sensibilité artistique, rigueur méthodologique et maîtrise des technologies pour concevoir des identités de marque remarquables et des solutions numériques performantes.
               </p>
               {/* 5 boutons de navigation + CV */}
-              <div className="flex flex-wrap items-center gap-2.5 pt-2">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2 pt-2">
                 <a
                   href={asset("cv ndiaya dieng/CV NDIAYA DIENG HACKEUSEP5.pdf")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white hover:bg-[#FDF4F8] text-[#6C1E50] font-black text-xs px-5 py-3 rounded-full shadow-xl transition-all duration-300 hover:scale-105"
+                  className="inline-flex justify-center items-center gap-2 bg-white hover:bg-[#FDF4F8] text-[#6C1E50] font-black text-xs px-3 sm:px-5 py-3 rounded-full shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <span>📄</span><span>Mon CV</span>
                 </a>
@@ -569,7 +569,7 @@ function CadreHero() {
                   <button
                     key={btn.id}
                     onClick={() => scrollTo(btn.id)}
-                    className={`inline-flex items-center gap-2 font-extrabold text-xs px-5 py-3 rounded-full transition-all duration-300 hover:scale-105 ${btn.style}`}
+                    className={`inline-flex justify-center items-center gap-2 font-extrabold text-xs px-3 sm:px-5 py-3 rounded-full transition-all duration-300 hover:scale-105 ${btn.style}`}
                   >
                     <span>{btn.icon}</span><span>{btn.label}</span>
                   </button>
@@ -582,7 +582,7 @@ function CadreHero() {
                 <div className="absolute -inset-1 rounded-[2.8rem] bg-gradient-to-br from-[#6C1E50] via-[#E8B3C9] to-[#6C1E50] opacity-70 blur-sm group-hover:opacity-100 transition-opacity duration-700 animate-pulse-glow" />
                 <div className="relative w-full max-w-sm rounded-[2.5rem] overflow-hidden border-2 border-white/25 shadow-2xl bg-black/60 p-2">
                   <div className="rounded-[2rem] overflow-hidden relative">
-                    <img src={asset("ND/1  ODC.jpeg")} alt="Ndiaya Dieng — Orange Digital Center" className="w-full h-[480px] object-cover object-top group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: "center top" }} />
+                    <img src={asset("ND/1  ODC.jpeg")} alt="Ndiaya Dieng — Orange Digital Center" className="w-full h-[360px] sm:h-[480px] object-cover object-top group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: "center top" }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
                     <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-emerald-500/90 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">
                       <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
@@ -614,9 +614,9 @@ function CadreAPropos() {
     { icon: "🤝", title: "Polyvalence & Esprit d'Équipe", desc: "Capacité d'adaptation fluide, proactivité et excellente communication au sein des équipes projets." },
   ];
   return (
-    <section id="a-propos" className="py-20 bg-[#FDF4F8] text-[#2D1524]">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-12">
-        <div className="rounded-[2.5rem] bg-white border-2 border-[#E8B3C9] p-8 sm:p-14 shadow-xl space-y-12 relative overflow-hidden">
+    <section id="a-propos" className="py-12 sm:py-20 bg-[#FDF4F8] text-[#2D1524]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+        <div className="rounded-[2rem] sm:rounded-[2.5rem] bg-white border-2 border-[#E8B3C9] p-5 sm:p-14 shadow-xl space-y-8 sm:space-y-12 relative overflow-hidden">
           {/* Décor graphique coin */}
           <div className="absolute top-0 right-0 pointer-events-none opacity-10">
             <svg width="160" height="160" viewBox="0 0 160 160" fill="none">
@@ -626,10 +626,10 @@ function CadreAPropos() {
               <circle cx="90" cy="8" r="4" fill="#6C1E50" />
             </svg>
           </div>
-          <span className="absolute top-6 right-6 sm:top-8 sm:right-10 text-xs font-black px-4 py-1.5 rounded-full bg-[#FDF4F8] text-[#6C1E50] border border-[#E8B3C9] uppercase tracking-widest shadow-sm z-10">
+          <span className="relative inline-flex max-w-full top-auto right-auto sm:absolute sm:top-8 sm:right-10 text-[10px] sm:text-xs font-black px-3 sm:px-4 py-1.5 rounded-full bg-[#FDF4F8] text-[#6C1E50] border border-[#E8B3C9] uppercase tracking-[0.12em] sm:tracking-widest shadow-sm z-10">
             01 · PRÉSENTATION & PARCOURS
           </span>
-          <div className="max-w-3xl space-y-3 pt-6 relative z-10">
+          <div className="max-w-3xl space-y-3 pt-0 sm:pt-6 relative z-10">
             <TitleDecor color="#6C1E50" />
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#6C1E50]">À Propos de Moi</h2>
             <p className="text-sm font-semibold text-[#6C1E50]/80">Ndiaya Dieng — Créative digitale polyvalente</p>
@@ -639,7 +639,7 @@ function CadreAPropos() {
               ))}
             </div>
           </div>
-          <div className="grid lg:grid-cols-12 gap-10 items-center relative z-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 items-center relative z-10">
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-4 text-sm sm:text-base text-[#2D1524]/90 leading-relaxed font-normal">
                 <p>Passionnée par la <strong>création visuelle</strong> et l'<strong>univers du numérique</strong>, je suis une créative digitale polyvalente diplômée du programme d'excellence <strong>Hackeuses (Sonatel Academy / Orange Digital Center Dakar)</strong>.</p>
@@ -671,9 +671,9 @@ function CadreAPropos() {
               <div className="relative group">
                 <div className="absolute -inset-3 rounded-[3rem] bg-gradient-to-br from-[#E8B3C9]/40 via-[#6C1E50]/20 to-[#E8B3C9]/40 blur-xl opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="relative w-full max-w-md bg-white p-3 rounded-[2.5rem] border-2 border-[#E8B3C9] shadow-2xl">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 bg-[#6C1E50] text-white text-[10px] font-black uppercase tracking-widest px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">✦ Ndiaya Dieng</div>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 max-w-[calc(100%-1rem)] bg-[#6C1E50] text-white text-[10px] font-black uppercase tracking-widest px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">✦ Ndiaya Dieng</div>
                   <div className="rounded-[2rem] overflow-hidden shadow-inner bg-[#FDF4F8]">
-                    <img src={asset("ND/2.png")} alt="Ndiaya Dieng - Portrait Officiel" className="w-full h-[480px] object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                    <img src={asset("ND/2.png")} alt="Ndiaya Dieng - Portrait Officiel" className="w-full h-[360px] sm:h-[480px] object-cover object-top group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   <div className="mt-3 pb-1 text-center space-y-0.5">
                     <span className="text-sm font-black text-[#6C1E50] uppercase tracking-wider block">Ndiaya Dieng</span>
@@ -694,33 +694,33 @@ function CadreProjetLolli({ onOpenItem }: { onOpenItem: (item: GalleryItem) => v
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const filteredItems = activeCategory === "all" ? LOLLI_ASSETS : LOLLI_ASSETS.filter((item) => item.category === activeCategory);
   return (
-    <section id="mes-realisations" className="py-24 bg-[#0A101D] text-white relative">
+    <section id="mes-realisations" className="py-14 sm:py-24 bg-[#0A101D] text-white relative">
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10 sm:space-y-16 relative z-10">
 
         {/* En-tête de section */}
         <div className="text-center space-y-4">
           <CenterTitleDecor color="#E8B3C9" dotColor="#E8B3C9" />
-          <span className="inline-block text-[11px] font-black tracking-[0.25em] uppercase text-[#E8B3C9] bg-[#E8B3C9]/10 border border-[#E8B3C9]/20 px-4 py-1.5 rounded-full">
+          <span className="inline-block max-w-full text-[10px] sm:text-[11px] leading-relaxed font-black tracking-[0.12em] sm:tracking-[0.25em] uppercase text-[#E8B3C9] bg-[#E8B3C9]/10 border border-[#E8B3C9]/20 px-4 py-1.5 rounded-full">
             Mes Réalisations · Design Graphique & Communication Visuelle
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white">
+          <h2 className="text-3xl sm:text-5xl font-black text-white">
             Identités de marque & <span className="text-[#E8B3C9]">supports visuels</span>
           </h2>
           <p className="text-sm text-white/55 max-w-2xl mx-auto">Logos, chartes graphiques, papeterie, signalétique et écosystèmes digitaux — une sélection de mes projets créatifs.</p>
         </div>
 
         {/* Étude de cas LOLLI */}
-        <div className="rounded-[2.5rem] bg-gradient-to-br from-[#1E293B] to-[#0F172A] border-2 border-white/15 p-8 sm:p-14 shadow-2xl space-y-8 relative overflow-hidden">
+        <div className="rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#1E293B] to-[#0F172A] border-2 border-white/15 p-5 sm:p-14 shadow-2xl space-y-6 sm:space-y-8 relative overflow-hidden">
           <div className="absolute top-6 right-8 w-24 h-24 rounded-full border border-[#EF4444]/20 pointer-events-none" />
           <div className="absolute top-10 right-12 w-12 h-12 rounded-full border border-[#EF4444]/12 pointer-events-none" />
           <div className="absolute bottom-8 left-6 w-5 h-5 rounded-full bg-[#EF4444]/15 pointer-events-none" />
           <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10">
-            <span className="text-[11px] font-black tracking-[0.25em] uppercase text-[#EF4444] bg-[#EF4444]/10 border border-[#EF4444]/30 px-4 py-1.5 rounded-full">ÉTUDE DE CAS · PROJET LOLLI</span>
+            <span className="max-w-full text-[10px] sm:text-[11px] leading-relaxed font-black tracking-[0.12em] sm:tracking-[0.25em] uppercase text-[#EF4444] bg-[#EF4444]/10 border border-[#EF4444]/30 px-4 py-1.5 rounded-full">ÉTUDE DE CAS · PROJET LOLLI</span>
             <span className="text-xs text-white/70 font-semibold">Industrie Connectée & IoT · Données Intelligentes</span>
           </div>
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 items-center">
             <div className="lg:col-span-6 space-y-6">
               <div className="space-y-2">
                 <div className="inline-block px-3 py-1 rounded-lg bg-red-500/20 text-[#EF4444] text-xs font-black uppercase">Identité de Marque & Écosystème</div>
@@ -741,7 +741,7 @@ function CadreProjetLolli({ onOpenItem }: { onOpenItem: (item: GalleryItem) => v
               </div>
             </div>
             <div className="lg:col-span-6 flex flex-col items-center">
-              <div onClick={() => onOpenItem(LOLLI_ASSETS[0])} className="w-full cursor-pointer group bg-white p-6 sm:p-10 rounded-3xl border-2 border-white/20 shadow-2xl hover:border-[#EF4444] transition-all duration-500 relative flex flex-col items-center justify-center min-h-[340px]">
+              <div onClick={() => onOpenItem(LOLLI_ASSETS[0])} className="w-full cursor-pointer group bg-white p-4 sm:p-10 rounded-3xl border-2 border-white/20 shadow-2xl hover:border-[#EF4444] transition-all duration-500 relative flex flex-col items-center justify-center min-h-[270px] sm:min-h-[340px]">
                 <div className="absolute top-4 right-4 bg-black/80 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full backdrop-blur-md border border-white/20">Agrandir 🔍</div>
                 <img src={LOLLI_ASSETS[0].src} alt="Logo LOLLI" className="w-full h-auto max-h-[280px] object-contain group-hover:scale-105 transition-transform duration-500" />
                 <div className="mt-4 text-center">
@@ -777,10 +777,10 @@ function CadreProjetLolli({ onOpenItem }: { onOpenItem: (item: GalleryItem) => v
               ))}
             </div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid min-[520px]:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filteredItems.map((item) => (
               <div key={item.id} onClick={() => onOpenItem(item)} className="group cursor-pointer rounded-3xl bg-[#1E293B] border border-white/15 overflow-hidden hover:border-[#EF4444] transition-all duration-500 shadow-xl flex flex-col justify-between">
-                <div className="relative overflow-hidden bg-white/5 h-[260px] flex items-center justify-center p-3">
+                <div className="relative overflow-hidden bg-white/5 h-[210px] sm:h-[260px] flex items-center justify-center p-3">
                   <img src={item.src} alt={item.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                   <span className={`absolute top-3 left-3 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md border ${item.tagColor}`}>{item.categoryLabel}</span>
                 </div>
@@ -803,20 +803,20 @@ function CadreProjetSavana({ onOpenItem }: { onOpenItem: (item: GalleryItem) => 
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const filteredItems = activeCategory === "all" ? SAVANA_ASSETS : SAVANA_ASSETS.filter((item) => item.category === activeCategory);
   return (
-    <section id="projet-savana" className="py-24 bg-[#0E1A0F] text-white relative">
+    <section id="projet-savana" className="py-14 sm:py-24 bg-[#0E1A0F] text-white relative">
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#D85600]/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-[#26430D]/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10 sm:space-y-16 relative z-10">
 
         {/* Étude de cas SAVANA */}
-        <div className="rounded-[2.5rem] bg-gradient-to-br from-[#1C2E1A] to-[#0E1A0F] border-2 border-[#D85600]/30 p-8 sm:p-14 shadow-2xl space-y-8 relative overflow-hidden">
+        <div className="rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#1C2E1A] to-[#0E1A0F] border-2 border-[#D85600]/30 p-5 sm:p-14 shadow-2xl space-y-6 sm:space-y-8 relative overflow-hidden">
           <div className="absolute top-6 right-8 w-20 h-20 rounded-full border border-[#D85600]/20 pointer-events-none" />
           <div className="absolute bottom-8 left-10 w-6 h-6 rounded-full bg-[#26430D]/40 pointer-events-none" />
           <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10">
-            <span className="text-[11px] font-black tracking-[0.25em] uppercase text-[#D85600] bg-[#D85600]/10 border border-[#D85600]/30 px-4 py-1.5 rounded-full">ÉTUDE DE CAS · PROJET SAVANA</span>
+            <span className="max-w-full text-[10px] sm:text-[11px] leading-relaxed font-black tracking-[0.12em] sm:tracking-[0.25em] uppercase text-[#D85600] bg-[#D85600]/10 border border-[#D85600]/30 px-4 py-1.5 rounded-full">ÉTUDE DE CAS · PROJET SAVANA</span>
             <span className="text-xs text-emerald-300 font-semibold">Agroalimentaire & Épices Africaines · Saveur, Valeur, Naturel</span>
           </div>
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 items-center">
             <div className="lg:col-span-6 space-y-6">
               <div className="space-y-2">
                 <div className="inline-block px-3 py-1 rounded-lg bg-[#D85600]/20 text-[#D85600] text-xs font-black uppercase">Identité de Marque, Packaging & Édition</div>
@@ -837,7 +837,7 @@ function CadreProjetSavana({ onOpenItem }: { onOpenItem: (item: GalleryItem) => 
               </div>
             </div>
             <div className="lg:col-span-6 flex flex-col items-center">
-              <div onClick={() => onOpenItem(SAVANA_ASSETS[0])} className="w-full cursor-pointer group bg-gradient-to-b from-[#1C2E1A] to-[#0A140B] p-4 sm:p-6 rounded-3xl border-2 border-[#D85600]/40 shadow-2xl hover:border-[#D85600] transition-all duration-500 relative flex flex-col items-center justify-center min-h-[340px]">
+              <div onClick={() => onOpenItem(SAVANA_ASSETS[0])} className="w-full cursor-pointer group bg-gradient-to-b from-[#1C2E1A] to-[#0A140B] p-4 sm:p-6 rounded-3xl border-2 border-[#D85600]/40 shadow-2xl hover:border-[#D85600] transition-all duration-500 relative flex flex-col items-center justify-center min-h-[270px] sm:min-h-[340px]">
                 <div className="absolute top-4 right-4 bg-black/80 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full backdrop-blur-md border border-white/20">Agrandir 🔍</div>
                 <img src={SAVANA_ASSETS[0].src} alt="Logo SAVANA" className="w-full h-auto max-h-[290px] object-contain rounded-2xl group-hover:scale-105 transition-transform duration-500 shadow-lg" />
                 <div className="mt-4 text-center">
@@ -873,7 +873,7 @@ function CadreProjetSavana({ onOpenItem }: { onOpenItem: (item: GalleryItem) => 
             </div>
           </div>
           <div onClick={() => onOpenItem(SAVANA_ASSETS[1])} className="group cursor-pointer rounded-3xl bg-gradient-to-r from-[#1C2E1A] to-[#122312] border-2 border-[#D85600]/40 p-6 sm:p-8 shadow-2xl hover:border-[#D85600] transition-all duration-500">
-            <div className="grid lg:grid-cols-12 gap-8 items-center">
+            <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
               <div className="lg:col-span-7 overflow-hidden rounded-2xl bg-black/40 p-2 flex items-center justify-center">
                 <img src={SAVANA_ASSETS[1].src} alt={SAVANA_ASSETS[1].title} className="w-full h-auto max-h-[360px] object-contain group-hover:scale-105 transition-transform duration-700 rounded-xl" />
               </div>
@@ -888,10 +888,10 @@ function CadreProjetSavana({ onOpenItem }: { onOpenItem: (item: GalleryItem) => 
               </div>
             </div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid min-[520px]:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filteredItems.map((item) => (
               <div key={item.id} onClick={() => onOpenItem(item)} className="group cursor-pointer rounded-3xl bg-[#1C2E1A] border border-white/15 overflow-hidden hover:border-[#D85600] transition-all duration-500 shadow-xl flex flex-col justify-between">
-                <div className="relative overflow-hidden bg-black/40 h-[260px] flex items-center justify-center p-3">
+                <div className="relative overflow-hidden bg-black/40 h-[210px] sm:h-[260px] flex items-center justify-center p-3">
                   <img src={item.src} alt={item.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                   <span className={`absolute top-3 left-3 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-md border ${item.tagColor}`}>{item.categoryLabel}</span>
                 </div>
@@ -948,18 +948,18 @@ function CadreUiUx() {
   ];
 
   return (
-    <section id="uiux-prototypage" className="py-24 bg-[#0D0A1A] text-white relative overflow-hidden">
+    <section id="uiux-prototypage" className="py-14 sm:py-24 bg-[#0D0A1A] text-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-80 h-80 bg-[#6C1E50]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-violet-900/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12 sm:space-y-20 relative z-10">
 
         {/* En-tête */}
         <div className="text-center space-y-5">
           <CenterTitleDecor color="#E8B3C9" dotColor="#6C1E50" />
-          <span className="inline-block text-[11px] font-black tracking-[0.25em] uppercase text-[#E8B3C9] bg-[#6C1E50]/20 border border-[#6C1E50]/40 px-4 py-1.5 rounded-full">
+          <span className="inline-block max-w-full text-[10px] sm:text-[11px] leading-relaxed font-black tracking-[0.12em] sm:tracking-[0.25em] uppercase text-[#E8B3C9] bg-[#6C1E50]/20 border border-[#6C1E50]/40 px-4 py-1.5 rounded-full">
             UI/UX & Prototypage · Ateliers Figma & Exercices
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black">
+          <h2 className="text-3xl sm:text-5xl font-black">
             Apprentissage & <span className="text-[#E8B3C9]">Prototypage</span>
           </h2>
           <p className="text-sm text-white/55 max-w-2xl mx-auto leading-relaxed">
@@ -968,9 +968,9 @@ function CadreUiUx() {
         </div>
 
         {/* Projets vidéo — alternance gauche/droite */}
-        <div className="space-y-24">
+        <div className="space-y-12 sm:space-y-24">
           {projects.map((project, idx) => (
-            <div key={project.id} className={`grid lg:grid-cols-12 gap-10 items-center`}>
+            <div key={project.id} className={`grid md:grid-cols-2 lg:grid-cols-12 gap-7 sm:gap-10 items-center`}>
               {/* Vidéo */}
               <div className={`lg:col-span-7 ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
                 <div
@@ -990,7 +990,7 @@ function CadreUiUx() {
                     controls
                     playsInline
                     preload="metadata"
-                    className="w-full h-auto max-h-[420px] object-cover block"
+                    className="w-full h-auto max-h-[260px] sm:max-h-[420px] object-cover block"
                   />
                   <div className="h-0.5 w-full" style={{ background: `linear-gradient(90deg, ${project.accentColor}, transparent)` }} />
                 </div>
@@ -1043,10 +1043,10 @@ function CadreMesCompetences() {
     { domaine: "Outils & Méthodes", icon: "⚙️", color: "#4A1A6B", items: ["Microsoft Office 365", "Google Workspace", "Notion & Trello", "Méthode agile (bases)", "Communication bilingue", "Veille créative"] },
   ];
   return (
-    <section id="mes-competences" className="py-24 bg-[#FDF4F8] text-[#2D1524] relative overflow-hidden">
+    <section id="mes-competences" className="py-14 sm:py-24 bg-[#FDF4F8] text-[#2D1524] relative overflow-hidden">
       <div className="absolute top-0 right-0 w-72 h-72 bg-[#E8B3C9]/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-56 h-56 bg-[#6C1E50]/8 rounded-full blur-3xl pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-14 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10 sm:space-y-14 relative z-10">
         <div className="text-center space-y-4 relative">
           {/* Décor SVG */}
           <div className="absolute -top-4 right-1/4 pointer-events-none opacity-20">
@@ -1057,15 +1057,15 @@ function CadreMesCompetences() {
             </svg>
           </div>
           <CenterTitleDecor color="#6C1E50" dotColor="#6C1E50" />
-          <span className="inline-block text-[11px] font-black tracking-[0.25em] uppercase text-[#6C1E50] bg-[#6C1E50]/10 border border-[#6C1E50]/20 px-4 py-1.5 rounded-full">
+          <span className="inline-block max-w-full text-[10px] sm:text-[11px] leading-relaxed font-black tracking-[0.12em] sm:tracking-[0.25em] uppercase text-[#6C1E50] bg-[#6C1E50]/10 border border-[#6C1E50]/20 px-4 py-1.5 rounded-full">
             Mes Compétences · Outils & Expertises
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#6C1E50]">
+          <h2 className="text-3xl sm:text-5xl font-black text-[#6C1E50]">
             Savoir-faire & <span className="text-[#2D1524]">Maîtrises</span>
           </h2>
           <p className="text-sm text-[#2D1524]/55 max-w-xl mx-auto">Un socle polyvalent couvrant toute la chaîne créative — du concept graphique à l'interface numérique.</p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid min-[520px]:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {competences.map((comp, idx) => (
             <div key={idx} className="group p-6 rounded-3xl bg-white border border-[#E8B3C9]/60 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
               <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full opacity-10 group-hover:opacity-20 transition-opacity" style={{ backgroundColor: comp.color }} />
@@ -1108,7 +1108,7 @@ function CadreContact() {
     setTimeout(() => setCopiedField(null), 2500);
   };
   return (
-    <section id="contact" className="py-20 bg-[#180D16] text-white relative overflow-hidden">
+    <section id="contact" className="py-14 sm:py-20 bg-[#180D16] text-white relative overflow-hidden">
       <div className="absolute top-10 right-10 pointer-events-none opacity-10">
         <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
           <circle cx="60" cy="60" r="58" stroke="#E8B3C9" strokeWidth="1" />
@@ -1116,14 +1116,14 @@ function CadreContact() {
           <circle cx="60" cy="60" r="6" fill="#E8B3C9" fillOpacity="0.4" />
         </svg>
       </div>
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8 sm:space-y-12 relative z-10">
         <div className="text-center space-y-4">
           <CenterTitleDecor color="#E8B3C9" dotColor="#E8B3C9" />
-          <span className="inline-block text-[11px] font-black tracking-[0.25em] uppercase text-[#E8B3C9] bg-[#E8B3C9]/10 border border-[#E8B3C9]/20 px-4 py-1.5 rounded-full">Recrutement & Collaboration</span>
-          <h2 className="text-4xl sm:text-5xl font-black">Me <span className="text-[#E8B3C9]">Contacter</span></h2>
+          <span className="inline-block max-w-full text-[10px] sm:text-[11px] leading-relaxed font-black tracking-[0.12em] sm:tracking-[0.25em] uppercase text-[#E8B3C9] bg-[#E8B3C9]/10 border border-[#E8B3C9]/20 px-4 py-1.5 rounded-full">Recrutement & Collaboration</span>
+          <h2 className="text-3xl sm:text-5xl font-black">Me <span className="text-[#E8B3C9]">Contacter</span></h2>
         </div>
-        <div className="rounded-[2.5rem] bg-gradient-to-b from-white/10 to-white/5 border border-white/15 p-8 sm:p-14 shadow-2xl">
-          <div className="grid lg:grid-cols-12 gap-10 items-start">
+        <div className="rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-b from-white/10 to-white/5 border border-white/15 p-5 sm:p-14 shadow-2xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-7 sm:gap-10 items-start">
             <div className="lg:col-span-5 space-y-6">
               <p className="text-sm text-white/75 leading-relaxed">Vous recherchez une créative digitale polyvalente, rigoureuse et déterminée ? Contactez-moi directement.</p>
               <div className="space-y-3 text-xs">
@@ -1155,7 +1155,7 @@ function CadreContact() {
               </div>
             </div>
             <div className="lg:col-span-7">
-              <div className="relative p-7 sm:p-10 rounded-[2rem] bg-white text-[#2D1524] shadow-2xl border border-[#E8B3C9]/60 overflow-hidden">
+              <div className="relative p-5 sm:p-10 rounded-[2rem] bg-white text-[#2D1524] shadow-2xl border border-[#E8B3C9]/60 overflow-hidden">
                 <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-[#E8B3C9]/30 to-transparent rounded-br-full pointer-events-none" />
                 <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-[#6C1E50]/10 to-transparent rounded-tl-full pointer-events-none" />
                 <div className="relative">
